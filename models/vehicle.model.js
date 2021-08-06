@@ -34,6 +34,10 @@ var Vehicle = new vehicleSchema({
         hourly_charge: {
                 type: Number,
                 required: true
+        },
+        vehicle_image: {
+                type: String,
+                required: true
         }
 }, {autoCreate: true});
 

@@ -20,6 +20,18 @@ module.exports = {
                 })
 	},
 
+        getPopularDeals: function(req, res, next) {
+                vehicleModel.find({is_popular: true}, (err, data) => {
+                        if (err) {
+                                data_service.res_err(res, err);
+                        }
+
+                        if(data) {
+                                data_service.res_ok(res, data);
+                        }
+                });
+        }
+
         // getStudent: async function(req, res, next) {
         //         let studentId = req.query.id;
         //         await studentModel.findById(studentId).exec((err, stu) => {

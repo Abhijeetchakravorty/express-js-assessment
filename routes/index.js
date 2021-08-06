@@ -32,6 +32,10 @@ router.post('/addVehicle', [
 });
 
 
+router.get('/popularDeals', (req, res, next) =>{
+        controller.getPopularDeals(req, res, next);
+});
+
 // // Add new Student
 // router.post('/addStudent', [
 //         body('name').exists(),
