@@ -14,5 +14,18 @@ module.exports = {
                         console.log(err);
                         data_service.res_err(res, err);
                 })
-	}
+	},
+
+        getStudent: async function(req, res, next) {
+                let studentId = req.query.id;
+                await studentModel.findById(studentId).exec((err, stu) => {
+                        if (err) {
+                                data_service.res_err(res, err);
+                        }
+
+                        if(stu) {
+                                data_service.res_ok(res, stu);
+                        }
+                });
+        }
 }
