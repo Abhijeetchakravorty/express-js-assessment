@@ -12,8 +12,9 @@ router.get('/', function(req, res, next) {
         });
 });
 
-router.get('/addStudent', [
-        checkQuery('name')
+router.post('/addStudent', [
+        body('name'),
+        body('marks')
 ], (req, res, next) => {
         let chk = data_format.v_err(req);
         if (!chk.success) {

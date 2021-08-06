@@ -5,8 +5,8 @@ let dbConnection = require('../services/dbConnect.service');
 module.exports = {
 	addStudent: function(req, res, next) {
 		const student = new studentModel({
-			name: "AbhijeetA",
-                        marks: 50
+			name: req.body.name,
+                        marks: req.body.marks
 		});
 		student.save().then((stu) => {
 			data_service.res_ok(res, "Student record added in the records");
