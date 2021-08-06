@@ -39,4 +39,8 @@ router.get('/getStudent', [
                 controller.getStudent(req, res, next);
         }
 });
+
+router.get('/getAllStudents', (req, res, next) => {
+        controller.getAllStudents(req, res, next);
+})
 module.exports = router;

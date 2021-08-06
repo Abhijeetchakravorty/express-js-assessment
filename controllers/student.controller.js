@@ -27,5 +27,17 @@ module.exports = {
                                 data_service.res_ok(res, stu);
                         }
                 });
+        },
+
+        getAllStudents: function(req, res, next) {
+                studentModel.find({}).sort({'marks': -1}).exec((err, stu) => {
+                        if (err) {
+                                data_service.res_err(res, err);
+                        }
+
+                        if(stu) {
+                                data_service.res_ok(res, stu);
+                        }
+                });
         }
 }
