@@ -4,18 +4,16 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const studentSchema = mongoose.Schema;
 
 /**
  * Schema definition
  */
-
 // recursive embedded-document schema
-const Student = new Schema({
+var Student = new studentSchema({
         name: {
                 type: String,
-                index: true,
-                autoIndexId: true
+                required: true
         },
         id: {
                 type: String,
@@ -25,4 +23,6 @@ const Student = new Schema({
         marks: {
                 type: Number
         }
-}, {autoCreate: true, capped: 1024});
+}, {autoCreate: true});
+
+module.exports = mongoose.model("Student", Student);
