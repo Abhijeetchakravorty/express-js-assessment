@@ -10,7 +10,8 @@ module.exports = {
                         is_popular: req.body.is_popular,
                         is_latest: req.body.is_latest,
                         km_charge: req.body.km_charge,
-                        hourly_charge: req.body.hourly_charge
+                        hourly_charge: req.body.hourly_charge,
+                        vehicle_image: req.body.vehicle_image
 		});
 		vehicle.save().then((stu) => {
 			data_service.res_ok(res, "Vehicle record added in the records");
