@@ -1,6 +1,6 @@
 #!/bin/sh
 export STUDENT_DB_HOST=localhost
-export STUDENT_DB_SCHEMA="student"
+export STUDENT_DB_SCHEMA="uber"
 #homestay
 export STUDENT_DB_USERNAME="root"
 export STUDENT_DB_PASSWORD="root@911"
