@@ -15,11 +15,6 @@ var Student = new studentSchema({
                 type: String,
                 required: true
         },
-        id: {
-                type: String,
-                lowercase: true,
-                trim: true
-        },
         marks: {
                 type: Number
         }
